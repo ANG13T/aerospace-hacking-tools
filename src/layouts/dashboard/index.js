@@ -67,13 +67,22 @@ function Dashboard() {
 
   return (
     <DashboardLayout>
-       <VuiBox
-        component="img"
-        src={globe}
-        alt="pattern-lines"
-        width="15rem"
-        opacity={0.8}
-      />
+      <VuiBox display="flex"
+        justifyContent="center"
+        alignItems="center" flexDirection="column">
+        <VuiBox
+          component="img"
+          src={globe}
+          alt="pattern-lines"
+          width="15rem"
+          textAlign="center"
+          opacity={0.8}
+        />
+        <VuiTypography color="white" variant="h2" fontWeight="bold" mb="18px" textAlign="center" marginTop="20px">
+          Aerospace Hacking Tools
+        </VuiTypography>
+      </VuiBox>
+
       <DashboardNavbar />
       <VuiBox py={3}>
         <VuiBox mb={3}>

@@ -164,50 +164,8 @@ function Sidenav({ color, brandName, routes, ...rest }) {
             <Icon sx={{ fontWeight: "bold" }}>close</Icon>
           </VuiTypography>
         </VuiBox>
-        <VuiBox component={NavLink} to="/" display="flex" alignItems="center">
-          <VuiBox
-            sx={
-              ((theme) => sidenavLogoLabel(theme, { miniSidenav }),
-              {
-                display: "flex",
-                alignItems: "center",
-                margin: "0 auto",
-              })
-            }
-          >
-            <VuiBox
-              display="flex"
-              sx={
-                ((theme) => sidenavLogoLabel(theme, { miniSidenav, transparentSidenav }),
-                {
-                  mr: miniSidenav || (miniSidenav && transparentSidenav) ? 0 : 1,
-                })
-              }
-            >
-              <SimmmpleLogo size="24px" />
-            </VuiBox>
-            <VuiTypography
-              variant="button"
-              textGradient={true}
-              color="logo"
-              fontSize={14}
-              letterSpacing={2}
-              fontWeight="medium"
-              sx={
-                ((theme) => sidenavLogoLabel(theme, { miniSidenav, transparentSidenav }),
-                {
-                  opacity: miniSidenav || (miniSidenav && transparentSidenav) ? 0 : 1,
-                  maxWidth: miniSidenav || (miniSidenav && transparentSidenav) ? 0 : "100%",
-                  margin: "0 auto",
-                })
-              }
-            >
-              {brandName}
-            </VuiTypography>
-          </VuiBox>
-        </VuiBox>
+       
       </VuiBox>
-      <Divider light />
       <List>{renderRoutes}</List>
       <VuiBox
         my={2}
