@@ -145,9 +145,6 @@ function DashboardNavbar({ absolute, light, isMini }) {
       sx={(theme) => navbar(theme, { transparentNavbar, absolute, light })}
     >
       <Toolbar sx={(theme) => navbarContainer(theme)}>
-        <VuiBox color="inherit" mb={{ xs: 1, md: 0 }} sx={(theme) => navbarRow(theme, { isMini })}>
-          <Breadcrumbs icon="home" title={route[route.length - 1]} route={route} light={light} />
-        </VuiBox>
         {isMini ? null : (
           <VuiBox sx={(theme) => navbarRow(theme, { isMini })}>
             <VuiBox pr={1}>

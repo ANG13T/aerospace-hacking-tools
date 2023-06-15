@@ -55,6 +55,7 @@ import { FaShoppingCart } from "react-icons/fa";
 // Data
 import LineChart from "examples/Charts/LineCharts/LineChart";
 import BarChart from "examples/Charts/BarCharts/BarChart";
+import globe from "assets/images/globe.png";
 import { lineChartDataDashboard } from "layouts/dashboard/data/lineChartData";
 import { lineChartOptionsDashboard } from "layouts/dashboard/data/lineChartOptions";
 import { barChartDataDashboard } from "layouts/dashboard/data/barChartData";
@@ -66,6 +67,13 @@ function Dashboard() {
 
   return (
     <DashboardLayout>
+       <VuiBox
+        component="img"
+        src={globe}
+        alt="pattern-lines"
+        width="15rem"
+        opacity={0.8}
+      />
       <DashboardNavbar />
       <VuiBox py={3}>
         <VuiBox mb={3}>
