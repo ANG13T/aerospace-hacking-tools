@@ -1,25 +1,4 @@
-/*!
-
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-// @mui material components
 import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
-import { Card, LinearProgress, Stack } from "@mui/material";
 import DefaultProjectCard from "examples/Cards/ProjectCards/DefaultProjectCard";
 
 // Vision UI Dashboard React components
@@ -42,7 +21,6 @@ import globe from "assets/images/globe.png";
 
 function Dashboard() {
   const { gradients } = colors;
-  const { cardContent } = gradients;
 
   return (
     <DashboardLayout>
