@@ -30,7 +30,6 @@ import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 import VuiButton from "components/VuiButton";
 import colors from "assets/theme/base/colors";
-import VuiAvatar from "components/VuiAvatar";
 
 function DefaultProjectCard({ image, label, title, description, action, authors }) {
 
