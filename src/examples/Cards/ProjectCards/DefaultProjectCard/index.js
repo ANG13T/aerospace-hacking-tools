@@ -29,28 +29,10 @@ import Tooltip from "@mui/material/Tooltip";
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 import VuiButton from "components/VuiButton";
+import colors from "assets/theme/base/colors";
 import VuiAvatar from "components/VuiAvatar";
 
 function DefaultProjectCard({ image, label, title, description, action, authors }) {
-  const renderAuthors = authors.map(({ image: media, name }) => (
-    <Tooltip key={name} title={name} placement="bottom">
-      <VuiAvatar
-        src={media}
-        alt={name}
-        size="xs"
-        sx={({ borders: { borderWidth }, palette: { dark }, functions: { rgba } }) => ({
-          border: `${borderWidth[2]} solid ${rgba(dark.focus, 0.5)}`,
-          cursor: "pointer",
-          position: "relative",
-          ml: -1.25,
-
-          "&:hover, &:focus": {
-            zIndex: "10",
-          },
-        })}
-      />
-    </Tooltip>
-  ));
 
   return (
     <VuiBox
@@ -59,6 +41,9 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
         flexDirection: "column",
         boxShadow: "none",
         overflow: "visible",
+        backgroundColor: "#080f30",
+        border: "1rem solid #080f30",
+        borderRadius: "7px"
       }}
     >
       <VuiBox
@@ -80,11 +65,6 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
           },
         })}
       >
-        <VuiBox>
-          <VuiTypography variant="xxs" color="text" fontWeight="medium" textTransform="capitalize">
-            {label}
-          </VuiTypography>
-        </VuiBox>
         <VuiBox mb={1}>
           {action.type === "internal" ? (
             <VuiTypography
@@ -110,36 +90,29 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
             </VuiTypography>
           )}
         </VuiBox>
-        <VuiBox mb={3} lineHeight={0}>
+        <VuiBox lineHeight={0}>
           <VuiTypography variant="button" fontWeight="regular" color="text">
             {description}
           </VuiTypography>
         </VuiBox>
+        <VuiBox mb={3}>
+          <VuiTypography variant="xxs" color="text" fontWeight="medium" textTransform="capitalize">
+            {label}
+          </VuiTypography>
+        </VuiBox>
         <VuiBox display="flex" justifyContent="space-between" alignItems="center">
-          {action.type === "internal" ? (
-            <VuiButton
-              component={Link}
-              to={action.route}
-              variant="outlined"
-              size="small"
-              color={action.color}
-            >
-              {action.label}
-            </VuiButton>
-          ) : (
-            <VuiButton
-              component="a"
-              href={action.route}
-              target="_blank"
-              rel="noreferrer"
-              variant="outlined"
-              size="small"
-              color={action.color}
-            >
-              {action.label}
-            </VuiButton>
-          )}
-          <VuiBox display="flex">{renderAuthors}</VuiBox>
+          <VuiButton
+            component="a"
+            href={action.route}
+            target="_blank"
+            rel="noreferrer"
+            variant="outlined"
+            size="small"
+            sx={{width: "100%"}}
+            color={action.color}
+          >
+            VIEW GITHUB
+          </VuiButton>
         </VuiBox>
       </VuiBox>
     </VuiBox>

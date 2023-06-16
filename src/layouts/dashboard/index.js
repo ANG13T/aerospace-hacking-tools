@@ -20,6 +20,11 @@
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 import { Card, LinearProgress, Stack } from "@mui/material";
+import DefaultProjectCard from "examples/Cards/ProjectCards/DefaultProjectCard";
+import team1 from "assets/images/avatar1.png";
+import team2 from "assets/images/avatar2.png";
+import team3 from "assets/images/avatar3.png";
+import team4 from "assets/images/avatar4.png";
 
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
@@ -43,6 +48,7 @@ import Projects from "layouts/dashboard/components/Projects";
 import OrderOverview from "layouts/dashboard/components/OrderOverview";
 import SatisfactionRate from "layouts/dashboard/components/SatisfactionRate";
 import ReferralTracking from "layouts/dashboard/components/ReferralTracking";
+import profile1 from "assets/images/profile-1.png";
 import VuiInput from "components/VuiInput";
 
 // React icons
@@ -100,36 +106,60 @@ function Dashboard() {
         <VuiBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={6} xl={3}>
-              <MiniStatisticsCard
-                title={{ text: "today's money", fontWeight: "regular" }}
-                count="$53,000"
-                percentage={{ color: "success", text: "+55%" }}
-                icon={{ color: "info", component: <IoWallet size="22px" color="white" /> }}
-              />
+            <DefaultProjectCard
+                    image={profile1}
+                    label="project #2"
+                    title="modern"
+                    description="As Uber works through a huge amount of internal management turmoil."
+                    action={{
+                      type: "internal",
+                      route: "/pages/profile/profile-overview",
+                      color: "white",
+                      label: "VIEW ALL",
+                    }}
+                  />
             </Grid>
             <Grid item xs={12} md={6} xl={3}>
-              <MiniStatisticsCard
-                title={{ text: "today's users" }}
-                count="2,300"
-                percentage={{ color: "success", text: "+3%" }}
-                icon={{ color: "info", component: <IoGlobe size="22px" color="white" /> }}
-              />
+            <DefaultProjectCard
+                    image={profile1}
+                    label="project #2"
+                    title="modern"
+                    description="As Uber works through a huge amount of internal management turmoil."
+                    action={{
+                      type: "internal",
+                      route: "/pages/profile/profile-overview",
+                      color: "white",
+                      label: "VIEW ALL",
+                    }}
+                  />
             </Grid>
             <Grid item xs={12} md={6} xl={3}>
-              <MiniStatisticsCard
-                title={{ text: "new clients" }}
-                count="+3,462"
-                percentage={{ color: "error", text: "-2%" }}
-                icon={{ color: "info", component: <IoDocumentText size="22px" color="white" /> }}
-              />
+               <DefaultProjectCard
+                    image={profile1}
+                    label="project #2"
+                    title="modern"
+                    description="As Uber works through a huge amount of internal management turmoil."
+                    action={{
+                      type: "internal",
+                      route: "/pages/profile/profile-overview",
+                      color: "white",
+                      label: "VIEW ALL",
+                    }}
+                  />
             </Grid>
             <Grid item xs={12} md={6} xl={3}>
-              <MiniStatisticsCard
-                title={{ text: "total sales" }}
-                count="$103,430"
-                percentage={{ color: "success", text: "+5%" }}
-                icon={{ color: "info", component: <FaShoppingCart size="20px" color="white" /> }}
-              />
+            <DefaultProjectCard
+                    image={profile1}
+                    label="project #2"
+                    title="modern"
+                    description="As Uber works through a huge amount of internal management turmoil."
+                    action={{
+                      type: "internal",
+                      route: "/pages/profile/profile-overview",
+                      color: "white",
+                      label: "VIEW ALL",
+                    }}
+                  />
             </Grid>
           </Grid>
         </VuiBox>
