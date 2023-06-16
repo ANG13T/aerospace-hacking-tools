@@ -105,7 +105,7 @@ function Dashboard() {
       <VuiBox py={3}>
         <VuiBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6} xl={3}>
+            <Grid item xs={12} md={6} xl={4}>
             <DefaultProjectCard
                     image={profile1}
                     label="project #2"
@@ -119,7 +119,7 @@ function Dashboard() {
                     }}
                   />
             </Grid>
-            <Grid item xs={12} md={6} xl={3}>
+            <Grid item xs={12} md={6} xl={4}>
             <DefaultProjectCard
                     image={profile1}
                     label="project #2"
@@ -133,7 +133,7 @@ function Dashboard() {
                     }}
                   />
             </Grid>
-            <Grid item xs={12} md={6} xl={3}>
+            <Grid item xs={12} md={6} xl={4}>
                <DefaultProjectCard
                     image={profile1}
                     label="project #2"
@@ -147,7 +147,7 @@ function Dashboard() {
                     }}
                   />
             </Grid>
-            <Grid item xs={12} md={6} xl={3}>
+            <Grid item xs={12} md={6} xl={4}>
             <DefaultProjectCard
                     image={profile1}
                     label="project #2"
