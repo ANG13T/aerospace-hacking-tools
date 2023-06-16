@@ -50,7 +50,7 @@ const routes = [
     name: "Dashboard",
     key: "dashboard",
     route: "/dashboard",
-    icon: <IoHome size="15px" color="inherit" />,
+    icon: "🚀",
     component: Dashboard,
     noCollapse: true,
   }

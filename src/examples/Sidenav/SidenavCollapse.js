@@ -51,11 +51,7 @@ function SidenavCollapse({ color, icon, name, children, active, noCollapse, open
           <ListItemIcon
             sx={(theme) => collapseIconBox(theme, { active, transparentSidenav, color })}
           >
-            {typeof icon === "string" ? (
-              <Icon sx={(theme) => collapseIcon(theme, { active })}>{icon}</Icon>
-            ) : (
-              icon
-            )}
+           {icon}
           </ListItemIcon>
 
           <ListItemText
