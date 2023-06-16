@@ -21,10 +21,6 @@ import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 import { Card, LinearProgress, Stack } from "@mui/material";
 import DefaultProjectCard from "examples/Cards/ProjectCards/DefaultProjectCard";
-import team1 from "assets/images/avatar1.png";
-import team2 from "assets/images/avatar2.png";
-import team3 from "assets/images/avatar3.png";
-import team4 from "assets/images/avatar4.png";
 
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
