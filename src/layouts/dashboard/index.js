@@ -37,7 +37,7 @@ const tagsToString = (tags) => {
 const cards = projects.map((proj,i) => 
 <Grid item xs={12} md={6} xl={4} key={i}>
 <DefaultProjectCard
-        image={proj.image}
+        image={require(`../../assets/tools/${proj.image}`).default}
         label={tagsToString(proj.tags)}
         title={proj.name}
         description={proj.description}
