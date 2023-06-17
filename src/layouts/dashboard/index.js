@@ -21,16 +21,28 @@ import categories from "data/categories";
 // Data
 import globe from "assets/images/globe.png";
 
-const cards = projects.map((proj) => 
-<Grid item xs={12} md={6} xl={4}>
+const tagsToString = (tags) => {
+  let output = "";
+  tags.forEach((tag, i) => {
+    if (i != tags.length - 1 && tags.length != 0) {
+      output += tag + ", ";
+    } else {
+      output += tag;
+    }
+  })
+  console.log("o", output, tags)
+  return output
+}
+
+const cards = projects.map((proj,i) => 
+<Grid item xs={12} md={6} xl={4} key={i}>
 <DefaultProjectCard
-        image={profile1}
-        label="project #2"
-        title="modern"
-        description="As Uber works through a huge amount of internal management turmoil."
+        image={proj.image}
+        label={tagsToString(proj.tags)}
+        title={proj.name}
+        description={proj.description}
         action={{
-          type: "internal",
-          route: "/pages/profile/profile-overview",
+          route: proj.website,
           color: "white",
           label: "VIEW ALL",
         }}

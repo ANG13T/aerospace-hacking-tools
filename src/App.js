@@ -31,7 +31,6 @@ import VuiBox from "components/VuiBox";
 
 // Vision UI Dashboard React example components
 import Sidenav from "examples/Sidenav";
-import Configurator from "examples/Configurator";
 
 // Vision UI Dashboard React themes
 import theme from "assets/theme";
@@ -118,10 +117,9 @@ export default function App() {
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}
           />
-          <Configurator />
+
         </>
       )}
-      {layout === "vr" && <Configurator />}
       <Switch>
         {getRoutes(routes)}
         <Redirect from="*" to="/dashboard" />

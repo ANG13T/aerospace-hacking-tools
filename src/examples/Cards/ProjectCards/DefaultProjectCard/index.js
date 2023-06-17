@@ -64,18 +64,7 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
           },
         })}
       >
-        <VuiBox mb={1}>
-          {action.type === "internal" ? (
-            <VuiTypography
-              component={Link}
-              to={action.route}
-              variant="h5"
-              color="white"
-              textTransform="capitalize"
-            >
-              {title}
-            </VuiTypography>
-          ) : (
+        <VuiBox mb={1} mt={2}>
             <VuiTypography
               component="a"
               href={action.route}
@@ -87,7 +76,6 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
             >
               {title}
             </VuiTypography>
-          )}
         </VuiBox>
         <VuiBox lineHeight={0}>
           <VuiTypography variant="button" fontWeight="regular" color="text">

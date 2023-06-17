@@ -37,8 +37,6 @@ import VuiButton from "components/VuiButton";
 
 // Vision UI Dashboard React example components
 import SidenavCollapse from "examples/Sidenav/SidenavCollapse";
-import SidenavCard from "examples/Sidenav/SidenavCard";
-
 // Custom styles for the Sidenav
 import SidenavRoot from "examples/Sidenav/SidenavRoot";
 import sidenavLogoLabel from "examples/Sidenav/styles/sidenav";
@@ -198,7 +196,6 @@ Sidenav.defaultProps = {
 Sidenav.propTypes = {
   color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
   // brand: PropTypes.string,
-  brandName: PropTypes.string.isRequired,
   routes: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
