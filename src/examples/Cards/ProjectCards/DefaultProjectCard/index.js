@@ -110,7 +110,7 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
             sx={{width: "100%"}}
             color={action.color}
           >
-            VIEW GITHUB
+            VIEW TOOL
           </VuiButton>
         </VuiBox>
       </VuiBox>

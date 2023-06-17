@@ -15,9 +15,28 @@ import colors from "assets/theme/base/colors";
 // Dashboard layout components
 import profile1 from "assets/images/profile-1.png";
 import VuiInput from "components/VuiInput";
+import projects from "data/projects";
+import categories from "data/categories";
 
 // Data
 import globe from "assets/images/globe.png";
+
+const cards = projects.map((proj) => 
+<Grid item xs={12} md={6} xl={4}>
+<DefaultProjectCard
+        image={profile1}
+        label="project #2"
+        title="modern"
+        description="As Uber works through a huge amount of internal management turmoil."
+        action={{
+          type: "internal",
+          route: "/pages/profile/profile-overview",
+          color: "white",
+          label: "VIEW ALL",
+        }}
+      />
+</Grid>
+);
 
 function Dashboard() {
   const { gradients } = colors;
@@ -55,62 +74,7 @@ function Dashboard() {
       <VuiBox py={3}>
         <VuiBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6} xl={4}>
-            <DefaultProjectCard
-                    image={profile1}
-                    label="project #2"
-                    title="modern"
-                    description="As Uber works through a huge amount of internal management turmoil."
-                    action={{
-                      type: "internal",
-                      route: "/pages/profile/profile-overview",
-                      color: "white",
-                      label: "VIEW ALL",
-                    }}
-                  />
-            </Grid>
-            <Grid item xs={12} md={6} xl={4}>
-            <DefaultProjectCard
-                    image={profile1}
-                    label="project #2"
-                    title="modern"
-                    description="As Uber works through a huge amount of internal management turmoil."
-                    action={{
-                      type: "internal",
-                      route: "/pages/profile/profile-overview",
-                      color: "white",
-                      label: "VIEW ALL",
-                    }}
-                  />
-            </Grid>
-            <Grid item xs={12} md={6} xl={4}>
-               <DefaultProjectCard
-                    image={profile1}
-                    label="project #2"
-                    title="modern"
-                    description="As Uber works through a huge amount of internal management turmoil."
-                    action={{
-                      type: "internal",
-                      route: "/pages/profile/profile-overview",
-                      color: "white",
-                      label: "VIEW ALL",
-                    }}
-                  />
-            </Grid>
-            <Grid item xs={12} md={6} xl={4}>
-            <DefaultProjectCard
-                    image={profile1}
-                    label="project #2"
-                    title="modern"
-                    description="As Uber works through a huge amount of internal management turmoil."
-                    action={{
-                      type: "internal",
-                      route: "/pages/profile/profile-overview",
-                      color: "white",
-                      label: "VIEW ALL",
-                    }}
-                  />
-            </Grid>
+            {cards} 
           </Grid>
         </VuiBox>
       </VuiBox>
