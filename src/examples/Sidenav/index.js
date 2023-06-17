@@ -81,58 +81,24 @@ function Sidenav({ color, brandName, routes, ...rest }) {
   }, []);
 
   // Render all the routes from the routes.js (All the visible items on the Sidenav)
-  const renderRoutes = routes.map(({ type, name, icon, title, noCollapse, key, route, href }) => {
+  const renderRoutes = routes.map(({ tag, emoji }) => {
     let returnValue;
 
-    if (type === "collapse") {
-      returnValue = href ? (
-        <Link
-          href={href}
-          key={key}
-          target="_blank"
+    returnValue = (
+      <Link
+          key={tag}
           rel="noreferrer"
           sx={{ textDecoration: "none" }}
         >
           <SidenavCollapse
             color={color}
-            name={name}
-            icon={icon}
-            active={key === collapseName}
-            noCollapse={noCollapse}
+            name={tag}
+            icon={emoji}
+            // active={key === collapseName}
+            // noCollapse={noCollapse}
           />
         </Link>
-      ) : (
-        <NavLink to={route} key={key}>
-          <SidenavCollapse
-            color={color}
-            key={key}
-            name={name}
-            icon={icon}
-            active={key === collapseName}
-            noCollapse={noCollapse}
-          />
-        </NavLink>
-      );
-    } else if (type === "title") {
-      returnValue = (
-        <VuiTypography
-          key={key}
-          color="white"
-          display="block"
-          variant="caption"
-          fontWeight="bold"
-          textTransform="uppercase"
-          pl={3}
-          mt={2}
-          mb={1}
-          ml={1}
-        >
-          {title}
-        </VuiTypography>
-      );
-    } else if (type === "divider") {
-      returnValue = <Divider light key={key} />;
-    }
+    )
 
     return returnValue;
   });

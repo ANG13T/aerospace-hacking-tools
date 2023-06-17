@@ -42,6 +42,7 @@ import createCache from "@emotion/cache";
 
 // Vision UI Dashboard React routes
 import routes from "routes";
+import categories from "data/categories";
 
 // Vision UI Dashboard React contexts
 import { useVisionUIController, setMiniSidenav, setOpenConfigurator } from "context";
@@ -111,7 +112,7 @@ export default function App() {
         <>
           <Sidenav
             color={sidenavColor}
-            routes={routes}
+            routes={categories}
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}
           />
