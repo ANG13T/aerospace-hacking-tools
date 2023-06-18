@@ -2,7 +2,12 @@
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 
-export default styled(Typography)(({ theme, ownerState }) => {
+export default styled(Typography)(({ theme, ownerState, fontFamily }) => {
+
+  if (!fontFamily) {
+    fontFamily = "atmospheric";
+  }
+
   const { palette, typography, functions } = theme;
   const { color, textTransform, verticalAlign, fontWeight, opacity, textGradient } = ownerState;
 
@@ -39,6 +44,6 @@ export default styled(Typography)(({ theme, ownerState }) => {
     color: color === "inherit" || !palette[color] ? "inherit" : palette[color].main,
     fontWeight: fontWeights[fontWeight] && fontWeights[fontWeight],
     ...(textGradient && gradientStyles()),
-    fontFamily: "atmospheric"
+    fontFamily: fontFamily
   };
 });

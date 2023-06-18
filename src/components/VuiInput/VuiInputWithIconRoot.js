@@ -22,6 +22,8 @@ export default styled("div")(({ theme, ownerState }) => {
   return {
     display: "flex",
     alignItems: "center",
+    outline: 0,
+    fontFamily: "Roboto",
     backgroundColor: disabled ? grey[600] : inputColors.backgroundColor,
     border: `${borderWidth[1]} solid`,
     borderRadius: borderRadius.lg,

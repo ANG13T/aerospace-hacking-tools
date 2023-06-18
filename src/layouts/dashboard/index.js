@@ -57,7 +57,8 @@ function Dashboard() {
     <DashboardLayout>
       <VuiBox display="flex"
         justifyContent="center"
-        alignItems="center" flexDirection="column">
+        alignItems="center" flexDirection="column"
+        marginBottom="20px">
         <VuiBox
           component="img"
           src={globe}
@@ -66,12 +67,16 @@ function Dashboard() {
           textAlign="center"
           opacity={0.8}
         />
-        <VuiTypography color="white" variant="h2" fontWeight="bold" mb="18px" textAlign="center" marginTop="20px">
+        <VuiTypography color="white" variant="h2" fontWeight="bold" mb="5px" textAlign="center" marginTop="25px" fontFamily="nulshock">
           Aerospace Hacking Tools
         </VuiTypography>
+        <VuiTypography color="white" variant="p" mb="18px" textAlign="center" fontFamily="Spacemono">
+          A comprehensive collection of space-related cybersecurity tools
+        </VuiTypography>
         <VuiInput
-        placeholder="Type here..."
+        placeholder="Search for tools..."
         icon={{ component: "search", direction: "left" }}
+        marginTop="25px"
         sx={({ breakpoints }) => ({
           [breakpoints.down("sm")]: {
             maxWidth: "80px",

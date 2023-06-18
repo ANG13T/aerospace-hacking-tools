@@ -142,6 +142,10 @@ export default styled(InputBase)(({ theme, ownerState }) => {
   };
 
   return {
+    minWidth: "400px",
+    marginTop: "0px",
+    fontFamily: "Spacemono",
+    outline: "none",
     backgroundColor: disabled ? `${grey[200]} !important` : white.main,
     pointerEvents: disabled ? "none" : "auto",
     backgroundColor: `${disabled ? grey[600] : inputColors.backgroundColor} !important`,
@@ -160,11 +164,10 @@ export default styled(InputBase)(({ theme, ownerState }) => {
     },
 
     "&.Mui-focused": {
-      borderColor: focusedBorderColorValue,
       paddingLeft: focusedPaddingLeftValue,
       paddingRight: focusedPaddingRightValue,
       boxShadow: focusedBoxShadowValue,
-      outline: 0,
+      outline: "none",
     },
 
     "&.MuiInputBase-multiline": {
