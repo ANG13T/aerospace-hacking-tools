@@ -4,31 +4,13 @@
 }
 
 @font-face {
-    font-family: 'ethnocentric';
-    src: url(./assets/fonts/ethnocentric.otf) format("truetype")
-}
-
-@font-face {
     font-family: 'nulshock';
     src: url(./assets/fonts/nulshock.otf) format("truetype")
 }
-@font-face {
-    font-family: 'oceanicdrift';
-    src: url(./assets/fonts/oceanicdrift.ttf) format("truetype")
-}
+
 @font-face {
     font-family: 'spyagency';
     src: url(./assets/fonts/spyagency.ttf) format("truetype")
-}
-
-@font-face {
-    font-family: 'Transformers';
-    src: url(./assets/fonts/Transformers.ttf) format("truetype")
-}
-
-@font-face {
-    font-family: 'Turnpike';
-    src: url(./assets/fonts/Turnpike.ttf) format("truetype")
 }
 
 @font-face {

@@ -57,17 +57,18 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
               color="white"
               variant="h5"
               textTransform="capitalize"
+              fontFamily="atmospheric"
             >
               {title}
             </VuiTypography>
         </VuiBox>
         <VuiBox lineHeight={0}>
-          <VuiTypography variant="button" fontWeight="regular" color="text">
+          <VuiTypography variant="button" fontWeight="regular" color="text"  fontFamily="Spacemono">
             {description}
           </VuiTypography>
         </VuiBox>
         <VuiBox mb={3}>
-          <VuiTypography variant="xxs" color="text" fontWeight="medium" textTransform="capitalize">
+          <VuiTypography variant="xxs" color="text" fontWeight="medium" textTransform="capitalize"  fontFamily="Spacemono">
             {label}
           </VuiTypography>
         </VuiBox>

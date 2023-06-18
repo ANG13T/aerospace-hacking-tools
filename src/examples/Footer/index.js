@@ -20,8 +20,9 @@ function Footer() {
           variant="button"
           sx={{ textAlign: "center", fontWeight: "400 !important" }}
           color="white"
+          fontFamily="Spacemono"
         >
-          @ 2023, Made with &nbsp;✨&nbsp; by &nbsp;
+          @ 2023, Made with ✨ by {" "}
           <VuiTypography
             component="a"
             variant="button"
@@ -29,6 +30,7 @@ function Footer() {
             sx={{ textAlign: "center", fontWeight: "500 !important" }}
             color="white"
             mr="2px"
+            fontFamily="Spacemono"
           >
             Angelina Tsuboi
           </VuiTypography>
@@ -43,6 +45,7 @@ function Footer() {
               href="https://www.creative-tim.com/templates"
               variant="body2"
               color="white"
+              fontFamily="Spacemono"
             >
               Submit a Tool
             </VuiTypography>
@@ -54,6 +57,7 @@ function Footer() {
               href="https://www.creative-tim.com/blog/"
               variant="body2"
               color="white"
+              fontFamily="Spacemono"
             >
               GitHub
             </VuiTypography>
@@ -65,6 +69,7 @@ function Footer() {
               href="https://www.creative-tim.com/license"
               variant="body2"
               color="white"
+              fontFamily="Spacemono"
             >
               License
             </VuiTypography>
