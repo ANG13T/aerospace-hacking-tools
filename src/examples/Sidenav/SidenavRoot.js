@@ -61,9 +61,8 @@ export default styled(Drawer)(({ theme, ownerState }) => {
     "& .MuiDrawer-paper": {
       boxShadow: xxl,
       border: "none",
-      background: transparentSidenav
-      ? transparent.main
-      : linearGradient(
+      height: "100vh",
+      background: linearGradient(
             gradients.sidenav.main,
             gradients.sidenav.state,
             gradients.sidenav.deg

@@ -54,9 +54,10 @@ function collapseIconBox(theme, ownerState) {
       }
       return sidenav.button;
     },
-    minWidth: pxToRem(32),
-    minHeight: pxToRem(32),
-    borderRadius: borderRadius.button,
+    minWidth: pxToRem(27),
+    fontSize: "15px",
+    minHeight: pxToRem(27),
+    borderRadius: 2,
     display: "grid",
     placeItems: "center",
     boxShadow: md,
