@@ -18,7 +18,7 @@ function Footer() {
       <VuiBox item xs={12} sx={{ textAlign: "center" }}>
         <VuiTypography
           variant="button"
-          sx={{ textAlign: "center", fontWeight: "400 !important" }}
+          sx={{ textAlign: "center", fontWeight: "200 !important" }}
           color="white"
           fontFamily="Spacemono"
         >
@@ -26,8 +26,10 @@ function Footer() {
           <VuiTypography
             component="a"
             variant="button"
+            fontWeight="bold"
+            target="_blank"
             href="https:/angelinatsuboi.net/"
-            sx={{ textAlign: "center", fontWeight: "500 !important" }}
+            sx={{ textAlign: "center", fontWeight: "600 !important", cursor: "pointer" }}
             color="white"
             mr="2px"
             fontFamily="Spacemono"
