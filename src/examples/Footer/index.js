@@ -55,26 +55,29 @@ function Footer() {
           <VuiBox mr={{ xs: "20px", lg: "46px" }}>
             <VuiTypography
               component="a"
+              target="_blank"
               href="https://www.creative-tim.com/templates"
               variant="body2"
               color="white"
             >
-              Marketplace
+              Submit a Tool
             </VuiTypography>
           </VuiBox>
           <VuiBox mr={{ xs: "20px", lg: "46px" }}>
             <VuiTypography
               component="a"
+              target="_blank"
               href="https://www.creative-tim.com/blog/"
               variant="body2"
               color="white"
             >
-              Blog
+              GitHub
             </VuiTypography>
           </VuiBox>
           <VuiBox>
             <VuiTypography
               component="a"
+              target="_blank"
               href="https://www.creative-tim.com/license"
               variant="body2"
               color="white"
