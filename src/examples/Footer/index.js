@@ -29,7 +29,7 @@ function Footer() {
             fontWeight="bold"
             target="_blank"
             href="https:/angelinatsuboi.net/"
-            sx={{ textAlign: "center", fontWeight: "600 !important", cursor: "pointer" }}
+            sx={{ textAlign: "center", fontWeight: "700 !important", cursor: "pointer" }}
             color="white"
             mr="2px"
             fontFamily="Spacemono"
