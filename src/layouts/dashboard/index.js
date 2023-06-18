@@ -13,7 +13,6 @@ import Footer from "examples/Footer";
 import colors from "assets/theme/base/colors";
 
 // Dashboard layout components
-import profile1 from "assets/images/profile-1.png";
 import VuiInput from "components/VuiInput";
 import projects from "data/projects";
 import categories from "data/categories";
@@ -67,7 +66,7 @@ function Dashboard() {
           textAlign="center"
           opacity={0.8}
         />
-        <VuiTypography color="white" variant="h2" fontWeight="bold" mb="5px" textAlign="center" marginTop="25px" fontFamily="nulshock">
+        <VuiTypography color="white" variant="h2" fontWeight="bold" mb="10px" textAlign="center" marginTop="25px" fontFamily="nulshock">
           Aerospace Hacking Tools
         </VuiTypography>
         <VuiTypography color="white" variant="p" mb="18px" textAlign="center" fontFamily="Spacemono">

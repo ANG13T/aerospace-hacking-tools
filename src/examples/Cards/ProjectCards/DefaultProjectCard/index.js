@@ -6,14 +6,10 @@ import { Link } from "react-router-dom";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// @mui material components
-import Tooltip from "@mui/material/Tooltip";
-
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 import VuiButton from "components/VuiButton";
-import colors from "assets/theme/base/colors";
 
 function DefaultProjectCard({ image, label, title, description, action, authors }) {
 
@@ -67,12 +63,12 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
             {description}
           </VuiTypography>
         </VuiBox>
-        <VuiBox mb={3}>
-          <VuiTypography variant="xxs" color="text" fontWeight="medium" textTransform="capitalize"  fontFamily="Spacemono">
+        <VuiBox mb={2}>
+          <VuiTypography variant="button" sx={{fontSize: "12px"}} color="text" fontWeight="medium" textTransform="capitalize"  fontFamily="Spacemono">
             {label}
           </VuiTypography>
         </VuiBox>
-        <VuiBox display="flex" justifyContent="space-between" alignItems="center">
+        <VuiBox display="flex" justifyContent="space-between" alignItems="center" mb={0}>
           <VuiButton
             component="a"
             href={action.route}
