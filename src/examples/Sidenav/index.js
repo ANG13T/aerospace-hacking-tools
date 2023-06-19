@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // react-router-dom components
 import { useLocation, NavLink } from "react-router-dom";
@@ -31,6 +31,7 @@ import { useVisionUIController, setMiniSidenav, setTransparentSidenav } from "co
 // function Sidenav({ color, brand, brandName, routes, ...rest }) {
 function Sidenav({ color, brandName, routes, ...rest }) {
   const [controller, dispatch] = useVisionUIController();
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const { miniSidenav, transparentSidenav } = controller;
   const location = useLocation();
   const { pathname } = location;
@@ -62,6 +63,10 @@ function Sidenav({ color, brandName, routes, ...rest }) {
     }
   }, []);
 
+  const onSelectItem = (item) => {
+    setSelectedCategory(item)
+  }
+
   // Render all the routes from the routes.js (All the visible items on the Sidenav)
   const renderRoutes = routes.map(({ tag, emoji }) => {
     let returnValue;
@@ -76,7 +81,8 @@ function Sidenav({ color, brandName, routes, ...rest }) {
             color={color}
             name={tag}
             icon={emoji}
-            // active={key === collapseName}
+            active={selectedCategory === tag}
+            onSelectItem={onSelectItem}
             // noCollapse={noCollapse}
           />
         </Link>

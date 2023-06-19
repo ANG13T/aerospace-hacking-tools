@@ -21,6 +21,10 @@ function collapseItem(theme, ownerState) {
     cursor: "pointer",
     userSelect: "none",
     whiteSpace: "nowrap",
+    transition: transitions.create("background", {
+      easing: transitions.easing.easeInOut,
+      duration: 2
+    }),
     boxShadow: active && transparentSidenav ? xxl : "none",
     [breakpoints.up("xl")]: {
       boxShadow: () => {
@@ -34,6 +38,9 @@ function collapseItem(theme, ownerState) {
         easing: transitions.easing.easeInOut,
         duration: transitions.duration.shorter,
       }),
+    },
+    ":hover": {
+      background: sidenav.button
     },
   };
 }

@@ -24,13 +24,13 @@ import {
 // Vision UI Dashboard React context
 import { useVisionUIController } from "context";
 
-function SidenavCollapse({ color, icon, name, children, active, noCollapse, open, ...rest }) {
+function SidenavCollapse({ color, icon, name, onSelectItem, children, active, noCollapse, open, ...rest }) {
   const [controller] = useVisionUIController();
   const { miniSidenav, transparentSidenav } = controller;
 
   return (
     <>
-      <ListItem component="li" dense={true}>
+      <ListItem component="li" dense={true} onClick={() => onSelectItem(name)}>
         <VuiBox {...rest} sx={(theme) => collapseItem(theme, { active, transparentSidenav })}>
           <ListItemIcon
             sx={(theme) => collapseIconBox(theme, { active, transparentSidenav, color })}
