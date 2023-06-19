@@ -80,11 +80,11 @@ function collapseIconBox(theme, ownerState) {
         if (!active) {
           background = sidenav.button;
         } else if (color === "default") {
-          background = info.main;
+          background = "#1b16a0";
         } else if (color === "warning") {
           background = gradients.warning.main;
         } else {
-          background = palette[color].main;
+          background = "#1b16a0";
         }
 
         return background;

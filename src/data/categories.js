@@ -1,5 +1,5 @@
 const categories = [
-    {tag: "All", emoji: "💫"},
+    {tag: "All Tools", emoji: "💫"},
     {tag: "Avionics", emoji: "✈️"},
     {tag: "Satellites", emoji: "🛰️"},
     {tag: "Drones", emoji: "🚁"},

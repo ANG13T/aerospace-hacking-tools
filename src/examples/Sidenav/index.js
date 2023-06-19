@@ -31,7 +31,7 @@ import { useVisionUIController, setMiniSidenav, setTransparentSidenav } from "co
 // function Sidenav({ color, brand, brandName, routes, ...rest }) {
 function Sidenav({ color, brandName, routes, ...rest }) {
   const [controller, dispatch] = useVisionUIController();
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("All Tools");
   const { miniSidenav, transparentSidenav } = controller;
   const location = useLocation();
   const { pathname } = location;
