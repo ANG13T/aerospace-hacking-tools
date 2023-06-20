@@ -38,8 +38,8 @@ const tagsToString = (tags) => {
 }
 
 const generateCards = (selectedTag) => {
-  return projects.map((proj,i) => 
-  <Grid item xs={12} md={6} xl={4} key={i}>
+  return projects.filter(project => project.tags.includes(selectedTag) || selectedTag == "All Tools").map((proj, i) => (
+    <Grid item xs={12} md={6} xl={4} key={i}>
   <DefaultProjectCard
           image={require(`../../assets/tools/${proj.image}`).default}
           label={tagsToString(proj.tags)}
@@ -52,25 +52,9 @@ const generateCards = (selectedTag) => {
           }}
         />
   </Grid>
-  );
+  ))
 }
 
-
-const cards2 = (selectedTag) => projects.filter(project => project.tags.includes(selectedTag) || selectedTag == "All Tools").map((proj, i) => (
-  <Grid item xs={12} md={6} xl={4} key={i}>
-<DefaultProjectCard
-        image={require(`../../assets/tools/${proj.image}`).default}
-        label={tagsToString(proj.tags)}
-        title={proj.name}
-        description={proj.description}
-        action={{
-          route: proj.website,
-          color: "white",
-          label: "VIEW ALL",
-        }}
-      />
-</Grid>
-))
 
 function Dashboard() {
   const { gradients } = colors;
