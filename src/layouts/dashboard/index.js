@@ -20,9 +20,9 @@ import categories from "data/categories";
 import globe from "assets/images/globe.png";
 
 import {
-  useVisionUIController,
-  setSelectedCategory
+  useVisionUIController
 } from "context";
+
 
 const tagsToString = (tags) => {
   let output = "";
@@ -37,21 +37,24 @@ const tagsToString = (tags) => {
   return output
 }
 
-const cards = projects.map((proj,i) => 
-<Grid item xs={12} md={6} xl={4} key={i}>
-<DefaultProjectCard
-        image={require(`../../assets/tools/${proj.image}`).default}
-        label={tagsToString(proj.tags)}
-        title={proj.name}
-        description={proj.description}
-        action={{
-          route: proj.website,
-          color: "white",
-          label: "VIEW ALL",
-        }}
-      />
-</Grid>
-);
+const generateCards = (selectedTag) => {
+  return projects.map((proj,i) => 
+  <Grid item xs={12} md={6} xl={4} key={i}>
+  <DefaultProjectCard
+          image={require(`../../assets/tools/${proj.image}`).default}
+          label={tagsToString(proj.tags)}
+          title={proj.name}
+          description={proj.description}
+          action={{
+            route: proj.website,
+            color: "white",
+            label: "VIEW ALL",
+          }}
+        />
+  </Grid>
+  );
+}
+
 
 const cards2 = (selectedTag) => projects.filter(project => project.tags.includes(selectedTag) || selectedTag == "All Tools").map((proj, i) => (
   <Grid item xs={12} md={6} xl={4} key={i}>
@@ -72,7 +75,7 @@ const cards2 = (selectedTag) => projects.filter(project => project.tags.includes
 function Dashboard() {
   const { gradients } = colors;
   const [controller] = useVisionUIController();
-  const { direction } = controller;
+  const { direction, category } = controller;
 
   return (
     <DashboardLayout>
@@ -112,7 +115,7 @@ function Dashboard() {
       <VuiBox py={3}>
         <VuiBox mb={3}>
           <Grid container spacing={3}>
-            {cards} 
+            {generateCards(category)} 
           </Grid>
         </VuiBox>
       </VuiBox>

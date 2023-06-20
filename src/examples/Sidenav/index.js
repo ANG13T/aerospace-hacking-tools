@@ -31,8 +31,7 @@ import { useVisionUIController, setMiniSidenav, setTransparentSidenav } from "co
 // function Sidenav({ color, brand, brandName, routes, ...rest }) {
 function Sidenav({ color, brandName, routes, setCategory, ...rest }) {
   const [controller, dispatch] = useVisionUIController();
-  const [selectedCategory, setSelectedCategory] = useState(setCategory);
-  const { miniSidenav, transparentSidenav } = controller;
+  const { miniSidenav, transparentSidenav, category } = controller;
   const location = useLocation();
   const { pathname } = location;
   const collapseName = pathname.split("/").slice(1)[0];
@@ -63,10 +62,6 @@ function Sidenav({ color, brandName, routes, setCategory, ...rest }) {
     }
   }, []);
 
-  const onSelectItem = (item) => {
-    setSelectedCategory(item)
-  }
-
   // Render all the routes from the routes.js (All the visible items on the Sidenav)
   const renderRoutes = routes.map(({ tag, emoji }) => {
     let returnValue;
@@ -81,8 +76,7 @@ function Sidenav({ color, brandName, routes, setCategory, ...rest }) {
             color={color}
             name={tag}
             icon={emoji}
-            active={selectedCategory === tag}
-            onSelectItem={onSelectItem}
+            active={category === tag}
             // noCollapse={noCollapse}
           />
         </Link>

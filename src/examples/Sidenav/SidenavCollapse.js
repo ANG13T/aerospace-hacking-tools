@@ -28,11 +28,11 @@ import {
 
 
 function SidenavCollapse({ color, icon, name, children, active, noCollapse, open, ...rest }) {
-  const [controller] = useVisionUIController();
+  const [controller, dispatch] = useVisionUIController();
   const { miniSidenav, transparentSidenav } = controller;
 
   const selectItem = () => {
-    setSelectedCategory(name);
+    setSelectedCategory(dispatch, name);
   }
 
   return (
