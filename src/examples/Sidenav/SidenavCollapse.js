@@ -21,16 +21,23 @@ import {
   collapseText,
 } from "examples/Sidenav/styles/sidenavCollapse";
 
-// Vision UI Dashboard React context
-import { useVisionUIController } from "context";
+import {
+  useVisionUIController,
+  setSelectedCategory
+} from "context";
 
-function SidenavCollapse({ color, icon, name, onSelectItem, children, active, noCollapse, open, ...rest }) {
+
+function SidenavCollapse({ color, icon, name, children, active, noCollapse, open, ...rest }) {
   const [controller] = useVisionUIController();
   const { miniSidenav, transparentSidenav } = controller;
 
+  const selectItem = () => {
+    setSelectedCategory(name);
+  }
+
   return (
     <>
-      <ListItem component="li" dense={true} onClick={() => onSelectItem(name)}>
+      <ListItem component="li" dense={true} onClick={() => selectItem()}>
         <VuiBox {...rest} sx={(theme) => collapseItem(theme, { active, transparentSidenav })}>
           <ListItemIcon
             sx={(theme) => collapseIconBox(theme, { active, transparentSidenav, color })}

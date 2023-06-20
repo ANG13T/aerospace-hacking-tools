@@ -1,20 +1,3 @@
-/*!
-
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Visionware.
-
-*/
 
 /**
   This file is used for controlling the global states of the components,
@@ -59,6 +42,9 @@ function reducer(state, action) {
     case "LAYOUT": {
       return { ...state, layout: action.value };
     }
+    case "SELECTED_CATEGORY": {
+      return {...state, category: action.value };
+    }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
     }
@@ -76,6 +62,7 @@ function VisionUIControllerProvider({ children }) {
     openConfigurator: false,
     direction: "ltr",
     layout: "dashboard",
+    category: "All Tools"
   };
 
   const [controller, dispatch] = useReducer(reducer, initialState);
@@ -108,6 +95,7 @@ const setFixedNavbar = (dispatch, value) => dispatch({ type: "FIXED_NAVBAR", val
 const setOpenConfigurator = (dispatch, value) => dispatch({ type: "OPEN_CONFIGURATOR", value });
 const setDirection = (dispatch, value) => dispatch({ type: "DIRECTION", value });
 const setLayout = (dispatch, value) => dispatch({ type: "LAYOUT", value });
+const setSelectedCategory = (dispatch, value) => dispatch({ type: "SELECTED_CATEGORY", value });
 
 export {
   VisionUIControllerProvider,
@@ -120,4 +108,5 @@ export {
   setOpenConfigurator,
   setDirection,
   setLayout,
+  setSelectedCategory
 };

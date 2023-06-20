@@ -19,6 +19,10 @@ import categories from "data/categories";
 // Data
 import globe from "assets/images/globe.png";
 
+import {
+  useVisionUIController,
+  setSelectedCategory
+} from "context";
 
 const tagsToString = (tags) => {
   let output = "";
@@ -67,6 +71,8 @@ const cards2 = (selectedTag) => projects.filter(project => project.tags.includes
 
 function Dashboard() {
   const { gradients } = colors;
+  const [controller] = useVisionUIController();
+  const { direction } = controller;
 
   return (
     <DashboardLayout>
