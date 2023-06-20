@@ -8,7 +8,6 @@ import VuiTypography from "components/VuiTypography";
 // Vision UI Dashboard React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import Footer from "examples/Footer";
-
 // Vision UI Dashboard React base styles
 import colors from "assets/theme/base/colors";
 
@@ -19,6 +18,7 @@ import categories from "data/categories";
 
 // Data
 import globe from "assets/images/globe.png";
+
 
 const tagsToString = (tags) => {
   let output = "";
@@ -49,7 +49,23 @@ const cards = projects.map((proj,i) =>
 </Grid>
 );
 
-function Dashboard() {
+const cards2 = (selectedTag) => projects.filter(project => project.tags.includes(selectedTag) || selectedTag == "All Tools").map((proj, i) => (
+  <Grid item xs={12} md={6} xl={4} key={i}>
+<DefaultProjectCard
+        image={require(`../../assets/tools/${proj.image}`).default}
+        label={tagsToString(proj.tags)}
+        title={proj.name}
+        description={proj.description}
+        action={{
+          route: proj.website,
+          color: "white",
+          label: "VIEW ALL",
+        }}
+      />
+</Grid>
+))
+
+function Dashboard({setTag}) {
   const { gradients } = colors;
 
   return (
@@ -70,7 +86,7 @@ function Dashboard() {
           Aerospace Hacking Tools
         </VuiTypography>
         <VuiTypography color="white" variant="p" mb="18px" textAlign="center" fontFamily="Spacemono">
-          A comprehensive collection of space-related cybersecurity tools
+          A comprehensive collection of space-related cybersecurity tools {setTag}
         </VuiTypography>
         <VuiInput
         placeholder="Search for tools..."
@@ -90,7 +106,7 @@ function Dashboard() {
       <VuiBox py={3}>
         <VuiBox mb={3}>
           <Grid container spacing={3}>
-            {cards} 
+            {cards2(setTag)} 
           </Grid>
         </VuiBox>
       </VuiBox>

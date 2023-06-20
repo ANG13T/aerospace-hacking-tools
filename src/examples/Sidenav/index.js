@@ -29,9 +29,9 @@ import { useVisionUIController, setMiniSidenav, setTransparentSidenav } from "co
 // Vision UI Dashboard React icons
 
 // function Sidenav({ color, brand, brandName, routes, ...rest }) {
-function Sidenav({ color, brandName, routes, ...rest }) {
+function Sidenav({ color, brandName, routes, setCategory, ...rest }) {
   const [controller, dispatch] = useVisionUIController();
-  const [selectedCategory, setSelectedCategory] = useState("All Tools");
+  const [selectedCategory, setSelectedCategory] = useState(setCategory);
   const { miniSidenav, transparentSidenav } = controller;
   const location = useLocation();
   const { pathname } = location;
