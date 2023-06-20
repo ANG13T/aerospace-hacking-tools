@@ -65,7 +65,7 @@ const cards2 = (selectedTag) => projects.filter(project => project.tags.includes
 </Grid>
 ))
 
-function Dashboard({setTag}) {
+function Dashboard() {
   const { gradients } = colors;
 
   return (
@@ -86,7 +86,7 @@ function Dashboard({setTag}) {
           Aerospace Hacking Tools
         </VuiTypography>
         <VuiTypography color="white" variant="p" mb="18px" textAlign="center" fontFamily="Spacemono">
-          A comprehensive collection of space-related cybersecurity tools {setTag}
+          A comprehensive collection of space-related cybersecurity tools
         </VuiTypography>
         <VuiInput
         placeholder="Search for tools..."
@@ -106,7 +106,7 @@ function Dashboard({setTag}) {
       <VuiBox py={3}>
         <VuiBox mb={3}>
           <Grid container spacing={3}>
-            {cards2(setTag)} 
+            {cards} 
           </Grid>
         </VuiBox>
       </VuiBox>

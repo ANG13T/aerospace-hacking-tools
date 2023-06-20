@@ -24,12 +24,11 @@ import rtlPlugin from "stylis-plugin-rtl";
 import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 
-// Vision UI Dashboard React routes
-import routes from "routes";
 import categories from "data/categories";
 
 // Vision UI Dashboard React contexts
 import { useVisionUIController, setMiniSidenav, setOpenConfigurator } from "context";
+import Dashboard from "layouts/dashboard";
 
 export default function App() {
   const [controller, dispatch] = useVisionUIController();
@@ -76,19 +75,6 @@ export default function App() {
     document.scrollingElement.scrollTop = 0;
   }, [pathname]);
 
-  const getRoutes = (allRoutes) =>
-    allRoutes.map((route) => {
-      if (route.collapse) {
-        return getRoutes(route.collapse);
-      }
-
-      if (route.route) {
-        return <Route exact path={route.route} component={route.component} key={route.key} />;
-      }
-
-      return null;
-    });
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -104,8 +90,7 @@ export default function App() {
         </>
       )}
       <Switch>
-        {getRoutes(routes)}
-        <Redirect from="*" to="/dashboard" />
+        <Route exact path={"/"} component={Dashboard} key={"dashboard"} />
       </Switch>
     </ThemeProvider>
   );
