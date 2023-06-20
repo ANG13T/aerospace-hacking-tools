@@ -20,7 +20,8 @@ import categories from "data/categories";
 import globe from "assets/images/globe.png";
 
 import {
-  useVisionUIController
+  useVisionUIController,
+  setSearch
 } from "context";
 
 
@@ -37,8 +38,8 @@ const tagsToString = (tags) => {
   return output
 }
 
-const generateCards = (selectedTag) => {
-  return projects.filter(project => project.tags.includes(selectedTag) || selectedTag == "All Tools").map((proj, i) => (
+const generateCards = (selectedTag, query) => {
+  return projects.filter(project => (query.length == 0 && (project.tags.includes(selectedTag) || selectedTag == "All Tools")) || (query.length > 0 && project.name.toLowerCase().includes(query.toLowerCase()))).map((proj, i) => (
     <Grid item xs={12} md={6} xl={4} key={i}>
   <DefaultProjectCard
           image={require(`../../assets/tools/${proj.image}`).default}
@@ -56,10 +57,17 @@ const generateCards = (selectedTag) => {
 }
 
 
+
+
 function Dashboard() {
   const { gradients } = colors;
-  const [controller] = useVisionUIController();
-  const { direction, category } = controller;
+  const [controller, dispatch] = useVisionUIController();
+  const { direction, category, search } = controller;
+
+  const handleSearchChange = (event) => {
+    const { value } = event.target;
+    setSearch(dispatch,value)
+  }
 
   return (
     <DashboardLayout>
@@ -85,6 +93,7 @@ function Dashboard() {
         placeholder="Search for tools..."
         icon={{ component: "search", direction: "left" }}
         marginTop="25px"
+        onChange={handleSearchChange}
         sx={({ breakpoints }) => ({
           [breakpoints.down("sm")]: {
             maxWidth: "80px",
@@ -99,7 +108,7 @@ function Dashboard() {
       <VuiBox py={3}>
         <VuiBox mb={3}>
           <Grid container spacing={3}>
-            {generateCards(category)} 
+            {generateCards(category, search)} 
           </Grid>
         </VuiBox>
       </VuiBox>

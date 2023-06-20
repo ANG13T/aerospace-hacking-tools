@@ -45,6 +45,9 @@ function reducer(state, action) {
     case "SELECTED_CATEGORY": {
       return {...state, category: action.value };
     }
+    case "SEARCH": {
+      return {...state, search: action.value };
+    }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
     }
@@ -62,7 +65,8 @@ function VisionUIControllerProvider({ children }) {
     openConfigurator: false,
     direction: "ltr",
     layout: "dashboard",
-    category: "All Tools"
+    category: "All Tools",
+    search: ""
   };
 
   const [controller, dispatch] = useReducer(reducer, initialState);
@@ -96,6 +100,7 @@ const setOpenConfigurator = (dispatch, value) => dispatch({ type: "OPEN_CONFIGUR
 const setDirection = (dispatch, value) => dispatch({ type: "DIRECTION", value });
 const setLayout = (dispatch, value) => dispatch({ type: "LAYOUT", value });
 const setSelectedCategory = (dispatch, value) => dispatch({ type: "SELECTED_CATEGORY", value });
+const setSearch = (dispatch, value) => dispatch({ type: "SEARCH", value });
 
 export {
   VisionUIControllerProvider,
@@ -108,5 +113,6 @@ export {
   setOpenConfigurator,
   setDirection,
   setLayout,
-  setSelectedCategory
+  setSelectedCategory,
+  setSearch
 };
