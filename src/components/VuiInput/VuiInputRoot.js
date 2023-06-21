@@ -142,7 +142,7 @@ export default styled(InputBase)(({ theme, ownerState }) => {
   };
 
   return {
-    minWidth: "400px",
+    minWidth: "350px",
     marginTop: "0px",
     fontFamily: "Spacemono",
     outline: "none",
