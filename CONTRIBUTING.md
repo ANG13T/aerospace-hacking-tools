@@ -1,0 +1,2 @@
+- go to /data/projects and make card data
+- upload project image to /assets/tools

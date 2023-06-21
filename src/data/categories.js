@@ -10,7 +10,7 @@ const categories = [
     {tag: "Radio", emoji: "📻"},
     {tag: "Spacecraft", emoji: "🚀"},
     {tag: "Star Trackers", emoji: "✨"},
-    {tag: "GNSS", emoji: "🌐"},
+    {tag: "Astrodynamics", emoji: "☄️"},
     {tag: "Simulation", emoji: "🎮"},
     {tag: "Mission Design", emoji: "✏️"},
     {tag: "Mission Control", emoji: "🎮"},
