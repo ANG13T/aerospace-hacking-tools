@@ -38,8 +38,16 @@ const tagsToString = (tags) => {
   return output
 }
 
+const sortCardsByDate = (card) => {
+  return card.sort((a, b) => {
+    a = a.dateAdded.split('/');
+    b = b.dateAdded.split('/');
+    return a[2] - b[2] || a[0] - b[0] || a[1] - b[1];
+  })
+}
+
 const generateCards = (selectedTag, query) => {
-  return projects.filter(project => (query.length == 0 && (project.tags.includes(selectedTag) || selectedTag == "All Tools")) || (query.length > 0 && project.name.toLowerCase().includes(query.toLowerCase()))).map((proj, i) => (
+  return sortCardsByDate(projects).reverse().filter(project => (query.length == 0 && (project.tags.includes(selectedTag) || selectedTag == "All Tools")) || (query.length > 0 && project.name.toLowerCase().includes(query.toLowerCase()))).map((proj, i) => (
     <Grid item xs={12} md={6} xl={4} key={i}>
   <DefaultProjectCard
           image={require(`../../assets/tools/${proj.image}`).default}
