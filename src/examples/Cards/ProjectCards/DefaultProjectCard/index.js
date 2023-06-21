@@ -58,7 +58,7 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
               {title}
             </VuiTypography>
         </VuiBox>
-        <VuiBox lineHeight={0}>
+        <VuiBox lineHeight={0} height={65}>
           <VuiTypography variant="button" fontWeight="regular" color="text"  fontFamily="Spacemono">
             {description}
           </VuiTypography>
