@@ -45,7 +45,7 @@ const generateCards = (selectedTag, query) => {
   return sortCardsByDate(projects).reverse().filter(project => (query.length == 0 && (project.tags.includes(selectedTag) || selectedTag == "All Tools")) || (query.length > 0 && project.name.toLowerCase().includes(query.toLowerCase()))).map((proj, i) => (
     <Grid item xs={12} md={6} xl={4} key={i}>
   <DefaultProjectCard
-          image={require(`../../assets/tools/${proj.image}`).default}
+          image={`/tools/${proj.image}`}
           label={tagsToString(proj.tags)}
           title={proj.name}
           description={proj.description}

@@ -34,7 +34,7 @@
 		"react-github-btn": "1.2.1",
 		"react-icons": "^4.3.1",
 		"react-router-dom": "5.2.0",
-		"react-scripts": "4.0.3",
+		"react-scripts": "^5.0.1",
 		"stylis": "4.0.10",
 		"stylis-plugin-rtl": "2.1.0",
 		"uuid": "8.3.2",
