@@ -44,7 +44,7 @@ function Footer() {
             <VuiTypography
               component="a"
               target="_blank"
-              href="https://www.creative-tim.com/templates"
+              href="https://github.com/ANG13T/aerospace-cybersecurity-tools/blob/main/CONTRIBUTING.md"
               variant="body2"
               color="white"
               fontFamily="Spacemono"
@@ -56,7 +56,7 @@ function Footer() {
             <VuiTypography
               component="a"
               target="_blank"
-              href="https://www.creative-tim.com/blog/"
+              href="https://github.com/ANG13T/aerospace-cybersecurity-tools"
               variant="body2"
               color="white"
               fontFamily="Spacemono"
@@ -68,7 +68,7 @@ function Footer() {
             <VuiTypography
               component="a"
               target="_blank"
-              href="https://www.creative-tim.com/license"
+              href="https://github.com/ANG13T/aerospace-cybersecurity-tools/blob/main/LICENSE"
               variant="body2"
               color="white"
               fontFamily="Spacemono"
