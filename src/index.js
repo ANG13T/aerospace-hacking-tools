@@ -6,7 +6,6 @@ import { BrowserRouter } from "react-router-dom";
 import App from "App";
 import 'index.css';
 
-// Vision UI Dashboard React Context Provider
 import { VisionUIControllerProvider } from "context";
 
 const rootElement = document.getElementById('root');

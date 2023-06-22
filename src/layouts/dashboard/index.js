@@ -1,14 +1,9 @@
 import Grid from "@mui/material/Grid";
 import DefaultProjectCard from "examples/Cards/ProjectCards/DefaultProjectCard";
-
-// Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
-
-// Vision UI Dashboard React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import Footer from "examples/Footer";
-// Vision UI Dashboard React base styles
 import colors from "assets/theme/base/colors";
 
 // Dashboard layout components

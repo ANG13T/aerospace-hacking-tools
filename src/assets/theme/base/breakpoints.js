@@ -1,11 +1,3 @@
-
-
-/**
- * The base breakpoints for the Vision UI Dashboard  Material.
- * You can add new breakpoints using this file.
- * You can customized the breakpoints for the entire Vision UI Dashboard  Material using thie file.
- */
-
 export default {
   values: {
     xs: 375,

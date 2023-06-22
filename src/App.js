@@ -10,13 +10,10 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Icon from "@mui/material/Icon";
 
-// Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
 
-// Vision UI Dashboard React example components
 import Sidenav from "examples/Sidenav";
 
-// Vision UI Dashboard React themes
 import theme from "assets/theme";
 
 // RTL plugins
@@ -26,7 +23,6 @@ import createCache from "@emotion/cache";
 
 import categories from "data/categories";
 
-// Vision UI Dashboard React contexts
 import { useVisionUIController, setMiniSidenav, setOpenConfigurator } from "context";
 import Dashboard from "layouts/dashboard";
 

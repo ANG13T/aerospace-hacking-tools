@@ -1,15 +1,6 @@
 
 
-/**
- * The base box-shadow styles for the Vision UI Dashboard  Material.
- * You can add new box-shadow using this file.
- * You can customized the box-shadow for the entire Vision UI Dashboard  Material using thie file.
- */
-
-// Vision UI Dashboard React Base Styles
 import colors from "assets/theme/base/colors";
-
-// Vision UI Dashboard React Helper Functions
 import boxShadow from "assets/theme/functions/boxShadow";
 
 const { black, white, info, inputColors, tabs } = colors;

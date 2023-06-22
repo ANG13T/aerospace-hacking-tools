@@ -1,17 +1,13 @@
 {
-	"name": "vision-ui-dashboard-react",
-	"version": "3.0.0",
+	"name": "aerospace-hacking-tools",
+	"version": "0.0.1",
 	"private": true,
-	"author": "Creative Tim",
-	"license": "See license in https://www.creative-tim.com/license",
-	"description": "Material UI version of Vision UI Dashboard by Creative Tim",
-	"homepage": "https://demos.creative-tim.com/vision-ui-dashboard-react/#/dashboard",
-	"bugs": {
-		"url": "https://github.com/creativetimofficial/vision-ui-dashboard-react/issues"
-	},
+	"author": "Angelina Tsuboi",
+	"license": "https://github.com/ANG13T/aerospace-cybersecurity-tools/blob/main/LICENSE",
+	"description": "A comprehensive collection of space-related cybersecurity tools",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/creativetimofficial/vision-ui-dashboard-react.git"
+		"url": "git+https://github.com/ANG13T/aerospace-cybersecurity-tools.git"
 	},
 	"dependencies": {
 		"@emotion/cache": "11.4.0",

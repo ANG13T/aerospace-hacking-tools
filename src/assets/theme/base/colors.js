@@ -1,28 +1,5 @@
-/** 
-
-=========================================================
-* Vision UI  React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-pro-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Visionware.
-
-*/
-
-/**
- * The base colors for the Vision UI Dashboard  Material.
- * You can add new color using this file.
- * You can customized the colors for the entire Vision UI Dashboard  Material using thie file.
- */
 
 export default {
-  // Vision UI Colors
   background: {
     default: "#f8f9fa",
   },
