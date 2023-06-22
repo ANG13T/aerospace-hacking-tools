@@ -1,10 +1,10 @@
 
 
-// Vision UI Dashboard React Base Styles
+
 import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
 
-// Vision UI Dashboard React Helper Functions
+
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const { transparent, primary, grey, text } = colors;

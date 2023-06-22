@@ -18,7 +18,6 @@ import {
   navbar
 } from "examples/Navbars/DashboardNavbar/styles";
 
-// Vision UI Dashboard React context
 import {
   useVisionUIController,
   setTransparentNavbar

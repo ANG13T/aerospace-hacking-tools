@@ -1,9 +1,9 @@
 
 
-// Vision UI Dashboard React base styles
+
 import borders from "assets/theme/base/borders";
 
-// Vision UI Dashboard React helper functions
+
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const { borderRadius } = borders;
