@@ -88,6 +88,94 @@ const projects = [
     website: "https://github.com/SatDump/SatDump",
     image: "satdump.png"
   },
+  {
+    name: "SatIntel",
+    dateAdded: "6/28/2023",
+    tags: ["Satellites"],
+    description: "OSINT tool for Satellites 🛰. Extract satellite telemetry, receive orbital predictions, and parse TLEs 🔭",
+    website: "https://github.com/ANG13T/SatIntel",
+    image: "satintel.png"
+  },
+  {
+    name: "SpaceXTelemetry API",
+    dateAdded: "6/28/2023",
+    tags: ["Spacecraft", "Launches"],
+    description: "Open Source REST API for telemetry and predictions to rocket launches",
+    website: "https://github.com/R4yGM/SpaceXTelemetry-Api",
+    image: "spacextelemetry.png"
+  },
+  {
+    name: "Astrocats",
+    dateAdded: "6/28/2023",
+    tags: ["Planets", "Astronomy"],
+    description: "Open Astronomy Catalogs",
+    website: "https://astrocats.space/",
+    image: "astrocats.png"
+  },
+  {
+    name: "Astrometry.net",
+    dateAdded: "6/28/2023",
+    tags: ["Star Trackers", "Astronomy"],
+    description: "Astrometric calibration meta-data tool for astronomical imaging",
+    website: "http://astrometry.net/",
+    image: "astrometry.png"
+  },
+  {
+    name: "Virgo",
+    dateAdded: "6/28/2023",
+    tags: ["Radio", "Astronomy"],
+    description: "A Versatile Spectrometer for Radio Astronomy",
+    website: "https://github.com/0xCoto/VIRGO",
+    image: "virgo.png"
+  },
+  {
+    name: "100,000 Stars",
+    dateAdded: "6/28/2023",
+    tags: ["Star Trackers", "Astronomy"],
+    description: "Interactive Visualization of the Stellar Neighborhood showing the location of 119,617 nearby stars",
+    website: "https://stars.chromeexperiments.com/",
+    image: "100000Stars.png"
+  },
+  {
+    name: "Harmony of the Spheres",
+    dateAdded: "6/28/2023",
+    tags: ["Simulation", "Astrodynamics"],
+    description: "Newtonian n-body gravity simulator",
+    website: "https://gravitysimulator.org/",
+    image: "harmony.png"
+  },
+  {
+    name: "KStars",
+    dateAdded: "6/28/2023",
+    tags: ["Simulation", "Astronomy"],
+    description: "Feature-rich and free astronomy software",
+    website: "https://kstars.kde.org/",
+    image: "kstars.png"
+  },
+  {
+    name: "Mars Now",
+    dateAdded: "6/28/2023",
+    tags: ["Simulation", "Planets"],
+    description: "Visualization of all data transmitted by spacecraft on Mars via NASA’s Mars Relay Network",
+    website: "https://mars.nasa.gov/explore/mars-now/",
+    image: "marsnow.png"
+  },
+  {
+    name: "NASA Eyes",
+    dateAdded: "6/28/2023",
+    tags: ["Star Trackers", "Planets"],
+    description: "Immersive simulations of the Earth and our solar system, the universe and the spacecraft exploring them.",
+    website: "https://eyes.nasa.gov/",
+    image: "nasaeyes.png"
+  },
+  {
+    name: "Orbit Simulator",
+    dateAdded: "6/28/2023",
+    tags: ["Astrodynamics", "Planets"],
+    description: "Powerful numerical integration tool for n-body gravitational simulations",
+    website: "http://orbitsimulator.com/gsim.html",
+    image: "orbitsim.png"
+  },
 ];
 
 export default projects;
