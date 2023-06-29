@@ -1,6 +1,6 @@
 # Adding a Tool
-1. Upload the project image or screenshot to this directory /assets/tools
-2. Go to this directory and make a JSON entry for your project
+1. Upload the project image or screenshot to [this directory](https://github.com/ANG13T/aerospace-hacking-tools/tree/main/public/tools)
+2. Go to [this directory](https://github.com/ANG13T/aerospace-hacking-tools/blob/main/src/data/projects.js) and add a JSON entry for your project
 A JSON entry should adhere to the following format outlined below
 ```
 {
