@@ -186,7 +186,7 @@ const projects = [
   },
   {
     name: "Orbitron - Satellite Tracking System",
-    dateAdded: "6/16/2023",
+    dateAdded: "7/02/2023",
     tags: ["Satellites", "OSINT", "Radio"],
     description: "Orbitron is a satellite tracking system for radio amateur and observing purposes.",
     website: "http://www.stoff.pl/",
