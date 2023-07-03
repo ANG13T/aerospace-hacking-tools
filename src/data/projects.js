@@ -190,7 +190,7 @@ const projects = [
     tags: ["Satellites", "OSINT", "Radio"],
     description: "Orbitron is a satellite tracking system for radio amateur and observing purposes.",
     website: "http://www.stoff.pl/",
-    image: "orbitron.png"
+    image: "orbitron.jpg"
   },
 ];
 
