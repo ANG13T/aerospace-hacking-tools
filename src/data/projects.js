@@ -192,6 +192,14 @@ const projects = [
     website: "http://www.stoff.pl/",
     image: "orbitron.jpg"
   },
+  {
+    name: "Stellarium",
+    dateAdded: "07/09/2023",
+    tags: ["Astronomy", "Star Trackers"],
+    description: "Desktop planetarium software that shows a realistic sky in 3D.",
+    website: "https://github.com/Stellarium/stellarium",
+    image: "stellarium.jpg"
+  },
 ];
 
 export default projects;
