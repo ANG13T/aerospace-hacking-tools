@@ -200,6 +200,14 @@ const projects = [
     website: "https://github.com/Stellarium/stellarium",
     image: "stellarium.jpg"
   },
+  {
+    name: "SatNOGS",
+    dateAdded: "7/20/2023",
+    tags: ["Satellites", "Ground Stations"],
+    description: "Open Source global network of satellite ground-stations",
+    website: "https://satnogs.org/",
+    image: "SatNOGS.png"
+  },
 ];
 
 export default projects;
