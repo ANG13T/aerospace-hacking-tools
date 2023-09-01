@@ -208,6 +208,14 @@ const projects = [
     website: "https://satnogs.org/",
     image: "SatNOGS.png"
   },
+  {
+    name: "NEODyS-2",
+    dateAdded: "31/08/2023",
+    tags: ["Near Earth Objects", "Asteroids","OSINT"],
+    description: "NEODyS provides information and services for all Near-Earth Asteroids (NEAs). ",
+    website: "https://newton.spacedys.com/",
+    image: "neodys-2.png"
+  },
 ];
 
 export default projects;
