@@ -216,6 +216,14 @@ const projects = [
     website: "https://newton.spacedys.com/",
     image: "neodys-2.png"
   },
+  {
+    name: "TinyGS",
+    dateAdded: "10/15/2023",
+    tags: ["Satellites", "Ground Stations"],
+    description: "TinyGS is an open network of Ground Stations distributed around the world to receive and operate LoRa satellites, weather probes and other flying objects, using cheap and versatile modules.",
+    website: "https://tinygs.com/",
+    image: "tinygs.png"
+  },
 ];
 
 export default projects;
